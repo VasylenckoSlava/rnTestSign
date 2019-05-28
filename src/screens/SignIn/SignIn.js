@@ -1,21 +1,19 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  StatusBar
-} from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Button } from "react-native";
 
-class About extends Component {
+class SignIn extends Component {
   static navigationOptions = {
-    title: "About"
+    title: "Please sign in"
+  };
+
+  _signInAsync = () => {
+    this.props.navigation.navigate("Dashboard");
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>About Screen</Text>
-        <StatusBar barStyle="default" />
+        <Button title="Sign in!" onPress={this._signInAsync} />
       </View>
     );
   }
@@ -30,4 +28,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default About;
+export default SignIn;

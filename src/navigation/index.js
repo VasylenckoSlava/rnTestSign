@@ -1,11 +1,22 @@
 import React from "react";
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import {
+  createAppContainer,
+  createStackNavigator,
+  createSwitchNavigator
+} from "react-navigation";
 import AboutScreen from "../screens/About/Home";
-import SighInScreen from "../screens/SighIn/SighIn";
+import SighInScreen from "../screens/SignIn/SignIn";
+import Dashboard from "../screens/Dashboard/Dashboard";
 
-const TabNavigator = createBottomTabNavigator({
-  About: AboutScreen,
-  SighIn: SighInScreen
+const AppStack = createStackNavigator({
+  Dashboard: Dashboard,
+  About: AboutScreen
 });
+const AuthStack = createStackNavigator({ SignIn: SighInScreen });
 
-export default createAppContainer(TabNavigator);
+export default createAppContainer(
+  createSwitchNavigator({
+    Auth: AuthStack,
+    App: AppStack
+  })
+);
