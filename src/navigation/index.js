@@ -5,7 +5,7 @@ import {
   createSwitchNavigator
 } from "react-navigation";
 import AboutScreen from "../screens/About/Home";
-import SighInScreen from "../screens/SignIn/SignIn";
+import SighInScreen from "../screens/SignUp/SignUp";
 import Dashboard from "../screens/Dashboard/Dashboard";
 
 const AppStack = createStackNavigator({
