@@ -1,0 +1,3 @@
+rootProject.name = 'testSighIn'
+
+include ':app'
