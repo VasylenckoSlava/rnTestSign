@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  TouchableOpacity,
   StyleSheet,
   Button,
   TextInput
@@ -48,6 +47,7 @@ class SignUp extends Component {
     } else {
       alert("Missing email or password");
     }
+      this.props.navigation.navigate("Dashboard");
   };
 
   registerUser = (email, password) => {

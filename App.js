@@ -11,6 +11,6 @@ import RootNavigation from "./src/navigation";
 
 export default class App extends Component<Props> {
   render() {
-    return <RootNavigation />;
+    return <RootNavigation navigation={this.props.navigation}/>;
   }
 }
